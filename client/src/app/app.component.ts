@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'The Dating App';
-  user:any;
+  users:any;
   constructor(private http:HttpClient)
   {}
   ngOnInit(): void {
@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   {
     this.http.get('https://localhost:5001/api/users').subscribe(response =>
    {
-   this.user=response;
+   this.users=response;
 
    },error=>{
      console.log(error);
